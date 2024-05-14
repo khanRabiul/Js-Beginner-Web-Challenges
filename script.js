@@ -48,3 +48,22 @@ function findPerimeter(length, width){
 	return 2 *(length + width);
 }
 console.log(findPerimeter(6,4));
+
+// Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers.
+function nextEdge(side1, side2) {
+	return (side1 + side2) - 1;	
+}
+console.log(nextEdge(8,10));
+
+//Write a function that returns the string "something" joined with a space " " and the given argument a.
+function giveMeSometing (a) {
+	return "something" + " " + a;
+}
+console.log(giveMeSometing("is better than nothing"));
+// Or if we want the first character of "a" is convertted to lower case
+
+function giveMeSometingLowCase (a) {
+	const formattedArg = a.charAt(0).toLowerCase() + a.slice(1);
+	return "something " + formattedArg;
+}
+console.log(giveMeSometingLowCase("do something"));
