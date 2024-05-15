@@ -67,3 +67,60 @@ function giveMeSometingLowCase (a) {
 	return "something " + formattedArg;
 }
 console.log(giveMeSometingLowCase("do something"));
+/* 
+You are counting points for a basketball game, given the amount of 2-pointers scored and 3-pointers scored, find the final points for the team and return that value.
+
+Examples
+points(1, 1) ➞ 5
+
+points(7, 5) ➞ 29
+
+points(38, 8) ➞ 100 */
+const points = (twoPointers, threePointers) => (2 * twoPointers) + (3 * threePointers);
+console.log(points(1,1));
+/* 
+Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+
+Examples
+lessThanOrEqualToZero(5) ➞ false
+
+lessThanOrEqualToZero(0) ➞ true
+
+lessThanOrEqualToZero(-2) ➞ true */
+
+function lessThanOrEqualToZero(num) {
+	if (num <= 0) {
+		return true;
+	} else {
+		return false;
+	}
+};
+console.log(lessThanOrEqualToZero(-1));
+console.log(lessThanOrEqualToZero(5));
+/* 
+Mubashir wants to swap two given numbers!
+
+It is not returning the right values. Can you help him fix it?
+
+a = 100
+b = 200
+a, b = swap(a, b)
+print(a, b) // Should print out "200, 100", but the function prints out "100, 100"
+Examples
+swap(100, 200) ➞ [200, 100]
+
+swap(44, 33) ➞ [33, 44]
+
+swap(21, 12) ➞ [12, 21] */
+
+function swap (a,b) {
+	 // Use a temporary variable to hold the value of 'a'
+	let temp = a;
+	 // Assign the value of 'b' to 'a'
+	a = b;
+	 // Assign the temporary value (initial 'a') to 'b'
+	b = temp;
+	 // Return an array containing the swapped values
+	return [a,b];
+}
+console.log(swap(100,200));
