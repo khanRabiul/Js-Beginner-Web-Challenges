@@ -156,3 +156,161 @@ function and(a, b) {
 }
 console.log(and("true", "false"));
 console.log(and("true", "true"));
+
+/* JavaScript Practice Problem for ASSDI Batch-2
+
+FizzBuzz
+Write a program that prints the numbers from 1 to 100. But for multiples of three, print "Fizz" instead of the number, and for the multiples of five, print "Buzz". For numbers that are multiples of both three and five, print "FizzBuzz". */
+const fizzBuzz = () => {
+	for (i = 1; i <=100; i++) {
+		if (i % 3 === 0 && i % 5 === 0){
+			console.log("FizzBuzz");
+		} else if (i % 3 === 0) {
+			console.log("Fizz");
+		} else if (i % 5 === 0) {
+			console.log("Buzz");
+		} else {
+			console.log(i);
+		}
+	}
+};
+fizzBuzz();
+
+const fizzBuzzor = () => {
+	for (i = 1; i <=100; i++) {
+		if (i % 3 === 0 && i % 5 === 0){
+			return ("FizzBuzz");
+		} else if (i % 3 === 0) {
+			return("Fizz");
+		} else if (i % 5 === 0) {
+			return ("Buzz");
+		} else {
+			return (i);
+		}
+	}
+};
+// console.log(fizzBuzzor());
+
+/* Count Vowels
+Write a function that counts the number of vowels in a given string. (Vowels are 'a', 'e', 'i', 'o', 'u').
+*/
+
+const countVowel = (str) => {
+	const vowels = "aeiouAEIOU";
+	let count = 0;
+	for (const char of str) {
+		if (vowels.includes(char)) {
+			count++
+		}
+	}
+	return count;
+}
+console.log(countVowel("Khan Rabiul Islma"));
+
+// OR
+const countVowels = (str) => {
+	let count = 0;
+	// converting input(str) to lowercase
+	str = str.toLowerCase();
+	for (let char of str) {
+		if (char === 'a' || char === 'e' || char === 'i'|| char === 'o' || char === 'u') {
+			count++;
+		}
+	}
+	return count;
+}
+console.log(countVowels("Suliman Khan"));
+
+/*>>>>>>>>>>>> Find Maximum Number
+Write a function that finds the maximum number in an array of numbers.
+ <<<<<<<<<<<<<<<*/
+
+const maxNumber = [54,45,47,45,5,540,245,21,54,1,5,4,45];
+const maxNumberMax = Math.max(...maxNumber);
+console.log(maxNumberMax);
+
+const maxNumberApply = Math.max.apply(null, maxNumber);
+console.log(maxNumberApply);
+
+const maxNumberLoop = (number) => {
+	let max = number[0];
+	for(let i = 0; i < number.length; i++){
+		if (number[i] > max) {
+			max = number[i];
+		}
+	}
+	return max;
+};
+console.log(maxNumberLoop(maxNumber));
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+const array = [45, 4, 8, 87, 4, 89, 5, 4, 45];
+
+const minNumber = Math.min(...array);
+console.log(minNumber);
+const maxNumber = Math.max(...array);
+console.log(maxNumber);
+
+
+const minNumber1 = Math.min.apply(null, array);
+console.log(minNumber1); // Output: 4
+const maxNumber1 = Math.max.apply(null, array);
+console.log(maxNumber1);
+
+
+let minNumber2 = array[0] //Assume the first element as initial minimum
+for (let i = 1; i < array.length; i++) {
+    if(array[i] < minNumber2) {  //if find any smaller number
+        minNumber2 = array[i];  // stored it 
+    }
+}
+console.log(minNumber2);
+
+let maxNumber2 = array[0]; //Assume the first element as initial maximum
+for (let i = 1; i < array.length; i++) {
+    if (array[i] >  maxNumber2) { //if find any big number
+        maxNumber2 = array[i];  // stored it 
+    }
+}
+console.log(maxNumber2);
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Write a function that finds the sum of all elements in an array of numbers. */
+const arraySum = [45,584,54,5,1,245,4,421];
+const arraySumFunction = (numbers) => {
+	let sum = 0;
+	for (let i= 0; i < numbers.length; i++) {
+		// sum = sum + numbers[i];
+		sum +=numbers[i];
+	}
+	return sum;
+}
+const resArraySum = arraySumFunction(arraySum);
+console.log(resArraySum);
+
+/* Reverse a String
+Write a function that reverses a string without using the built-in reverse method
+ */
+const stringReverse = "Khan Rabiul Islam"
+const stringReversed =(char) => {
+	const charArray = char.toLowerCase().split("");
+	const reversed = charArray.reverse();
+	const joint = reversed.join("");
+	return joint;
+}
+console.log(stringReversed(stringReverse));
+
+/* Write a function that removes duplicates from an array and returns a new array without duplicates. */
+
+const duplicates = [4,15,452,154,4,54,4,2,2,2,77,88,77,4];
+const removeDuplicates = (array) => {
+	let uniqueArray = [];
+	array.forEach((element)=> {
+		if (!uniqueArray.includes(element)) {
+			uniqueArray.push(element);
+		}
+	})
+	return uniqueArray;
+};
+console.log(removeDuplicates(duplicates));
