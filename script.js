@@ -314,3 +314,52 @@ const removeDuplicates = (array) => {
 	return uniqueArray;
 };
 console.log(removeDuplicates(duplicates));
+
+/* Factorial
+Write a function to calculate the factorial of a given number. The factorial of a non-negative integer 𝑛 is the product of all positive integers less than or equal to 𝑛.
+ */
+const getFactorial = (n) => {
+	let fact = 1;
+	for (let i = 1; i <= n; i++) {
+		fact *= i;
+	}
+	return fact;
+}
+console.log(getFactorial(4));
+
+
+/* Palindrome Check
+Write a function to determine if a word or phrase is a palindrome (reads the same backward as forward). Ignore spaces and non-alphanumeric characters.
+ */
+const isPalindrome = (str) => {
+	const cleanedStr = str.replace(/[^A-Za-z0-9]/g,"").toLowerCase();
+
+	return cleanedStr === cleanedStr.split('').reverse().join('');
+};
+console.log(isPalindrome("mom"));
+console.log(isPalindrome("Man"));
+
+/* 
+Create a function that returns true when num1 is equal to num2; otherwise return false. */
+
+function isSameNum (num1, num2) {
+	return num1 === num2;
+}
+console.log(isSameNum(4, 4));
+
+/* Create a function that takes the number of wins, draws and losses and calculates the number of points a football team has obtained so far. */
+const footballPoints = (wins, draws, losses) => {
+	let pointsFromWins = wins * 3;
+	let poinsFromDraws = draws * 1;
+	let totalPoins = pointsFromWins + poinsFromDraws;
+	return totalPoins;
+}
+console.log(footballPoints(4,2,0));
+
+/* Write a function that takes two integers (hours, minutes), converts them to seconds, and adds them. */
+const convetSeconds = (hours, minutes) => {
+	return (hours * 60) * 60 + (minutes * 60);
+	// return hours * (60 * 60) + (minutes * 60);
+	
+}
+console.log(convetSeconds(1, 3));
