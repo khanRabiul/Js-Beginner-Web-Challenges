@@ -363,3 +363,82 @@ const convetSeconds = (hours, minutes) => {
 	
 }
 console.log(convetSeconds(1, 3));
+
+/* Fix the code in the Code tab so the function returns true if and only if x is equal to 7.
+
+Examples
+isSeven(4) ➞ false
+
+isSeven(9) ➞ false
+
+isSeven(7) ➞ true */
+
+function isSeven(x) {
+	return x  === 7 ? "true":"false";
+	
+}
+console.log(isSeven(4));
+
+/* Create a function that takes three arguments prob, prize, pay and returns true if prob * prize > pay; otherwise return false.
+
+To illustrate:
+
+profitableGamble(0.2, 50, 9)
+... should yield true, since the net profit is 1 (0.2 * 50 - 9), and 1 > 0.
+
+Examples
+profitableGamble(0.2, 50, 9) ➞ true
+
+profitableGamble(0.9, 1, 2) ➞ false
+
+profitableGamble(0.9, 3, 2) ➞ true */
+
+/* function profitableGamble(prob, prize, pay) {
+	return prob * prize > pay ? "true" : "false";
+}
+console.log(profitableGamble(4,24,20)); */
+
+const profitableGamble = (prob, prize, pay) => prob * prize > pay ? "true" : "false";
+console.log(profitableGamble(4,24,20));
+
+
+/* Create a function that takes a boolean variable flag and returns it as a string.
+
+Examples
+boolToString(true) ➞ "true"
+
+boolToString(false) ➞ "false" */
+
+const boolToString = (flag) => flag.toString();
+console.log(boolToString(false));
+// Or not outside solution
+const boolToNumber = (flag) => Number(flag);
+console.log(boolToNumber(true));
+console.log(boolToNumber(false));
+console.log(boolToNumber(5));
+
+
+/* Create a function that returns the number of frames shown in a given number of minutes for a certain FPS.
+
+Examples
+frames(1, 1) ➞ 60
+
+frames(10, 1) ➞ 600
+
+frames(10, 25) ➞ 15000
+Notes
+FPS stands for "frames per second" and it's the number of frames a computer screen shows every second */
+const frames = (minutess, fps) => minutess * 60 * fps;
+console.log( frames(10, 1));
+
+/* Create a function that will handle simple math expressions. The input is an expression in the form of a string.
+
+Examples
+calculator("23+4") ➞ 27
+
+calculator("45-15") ➞ 30
+
+calculator("13+2-5*2") ➞ 5
+
+calculator("49/7*2-3") ➞ 11 */
+
