@@ -1,4 +1,4 @@
-//Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
+//01 Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
 function lessThan100(a,b) {
     if(a + b < 100){
         return true;
@@ -10,7 +10,7 @@ const res = lessThan100(20, 50);
 console.log(res);
 
 
-//A student learning JavaScript was trying to make a function. His code should concatenate a passed string name with string "Edabit" and store it in a variable called result. He needs your help to fix this code.
+//02 A student learning JavaScript was trying to make a function. His code should concatenate a passed string name with string "Edabit" and store it in a variable called result. He needs your help to fix this code.
 /* function nameString(name){
 	var b == "Edabit"
 	var result == name + b
@@ -26,7 +26,7 @@ function nameString(name){
 // Solution 02
  const nameString1 = name1 => `${name1}Edabit`;
 
- /* In this challenge, a farmer is asking you to tell him how many legs can be counted among all his animals. The farmer breeds three species:
+ /*03 In this challenge, a farmer is asking you to tell him how many legs can be counted among all his animals. The farmer breeds three species:
 
  chickens = 2 legs
  cows = 4 legs
@@ -43,19 +43,19 @@ const animal = (chikens, cows, pigs) => (chikens * 2) + (cows * 4) + (pigs * 4);
 // Solution 03
 const anim = (chickens, cows, pigs) => chickens * 2 + (cows + pigs) * 4;
 
-/* Create a function that takes length and width and finds the perimeter of a rectangle. */
+/*04 Create a function that takes length and width and finds the perimeter of a rectangle. */
 function findPerimeter(length, width){
 	return 2 *(length + width);
 }
 console.log(findPerimeter(6,4));
 
-// Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers.
+//05 Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers.
 function nextEdge(side1, side2) {
 	return (side1 + side2) - 1;	
 }
 console.log(nextEdge(8,10));
 
-//Write a function that returns the string "something" joined with a space " " and the given argument a.
+//06 Write a function that returns the string "something" joined with a space " " and the given argument a.
 function giveMeSometing (a) {
 	return "something" + " " + a;
 }
@@ -67,7 +67,7 @@ function giveMeSometingLowCase (a) {
 	return "something " + formattedArg;
 }
 console.log(giveMeSometingLowCase("do something"));
-/* 
+/* 07
 You are counting points for a basketball game, given the amount of 2-pointers scored and 3-pointers scored, find the final points for the team and return that value.
 
 Examples
@@ -78,7 +78,7 @@ points(7, 5) ➞ 29
 points(38, 8) ➞ 100 */
 const points = (twoPointers, threePointers) => (2 * twoPointers) + (3 * threePointers);
 console.log(points(1,1));
-/* 
+/* 08
 Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
 
 Examples
@@ -97,7 +97,7 @@ function lessThanOrEqualToZero(num) {
 };
 console.log(lessThanOrEqualToZero(-1));
 console.log(lessThanOrEqualToZero(5));
-/* 
+/* 09
 Mubashir wants to swap two given numbers!
 
 It is not returning the right values. Can you help him fix it?
@@ -125,7 +125,7 @@ function swap (a,b) {
 }
 console.log(swap(100,200));
 
-/* JavaScript has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
+/*10  JavaScript has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
 
 Consider a && b:
 
@@ -157,7 +157,7 @@ function and(a, b) {
 console.log(and("true", "false"));
 console.log(and("true", "true"));
 
-/* JavaScript Practice Problem for ASSDI Batch-2
+/* 11 JavaScript Practice Problem for ASSDI Batch-2
 
 FizzBuzz
 Write a program that prints the numbers from 1 to 100. But for multiples of three, print "Fizz" instead of the number, and for the multiples of five, print "Buzz". For numbers that are multiples of both three and five, print "FizzBuzz". */
@@ -189,9 +189,9 @@ const fizzBuzzor = () => {
 		}
 	}
 };
-// console.log(fizzBuzzor());
+//console.log(fizzBuzzor());
 
-/* Count Vowels
+/*  12  Count Vowels
 Write a function that counts the number of vowels in a given string. (Vowels are 'a', 'e', 'i', 'o', 'u').
 */
 
@@ -221,7 +221,7 @@ const countVowels = (str) => {
 }
 console.log(countVowels("Suliman Khan"));
 
-/*>>>>>>>>>>>> Find Maximum Number
+/*>>>>>>>>>>>>  13  Find Maximum Number
 Write a function that finds the maximum number in an array of numbers.
  <<<<<<<<<<<<<<<*/
 
@@ -244,7 +244,7 @@ const maxNumberLoop = (number) => {
 console.log(maxNumberLoop(maxNumber));
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const array = [45, 4, 8, 87, 4, 89, 5, 4, 45];
+14 const array = [45, 4, 8, 87, 4, 89, 5, 4, 45];
 
 const minNumber = Math.min(...array);
 console.log(minNumber);
@@ -289,7 +289,7 @@ const arraySumFunction = (numbers) => {
 const resArraySum = arraySumFunction(arraySum);
 console.log(resArraySum);
 
-/* Reverse a String
+/* 15 Reverse a String
 Write a function that reverses a string without using the built-in reverse method
  */
 const stringReverse = "Khan Rabiul Islam"
@@ -301,7 +301,7 @@ const stringReversed =(char) => {
 }
 console.log(stringReversed(stringReverse));
 
-/* Write a function that removes duplicates from an array and returns a new array without duplicates. */
+/* 16 Write a function that removes duplicates from an array and returns a new array without duplicates. */
 
 const duplicates = [4,15,452,154,4,54,4,2,2,2,77,88,77,4];
 const removeDuplicates = (array) => {
@@ -315,7 +315,7 @@ const removeDuplicates = (array) => {
 };
 console.log(removeDuplicates(duplicates));
 
-/* Factorial
+/* 17 Factorial
 Write a function to calculate the factorial of a given number. The factorial of a non-negative integer 𝑛 is the product of all positive integers less than or equal to 𝑛.
  */
 const getFactorial = (n) => {
@@ -328,7 +328,7 @@ const getFactorial = (n) => {
 console.log(getFactorial(4));
 
 
-/* Palindrome Check
+/* 18 Palindrome Check
 Write a function to determine if a word or phrase is a palindrome (reads the same backward as forward). Ignore spaces and non-alphanumeric characters.
  */
 const isPalindrome = (str) => {
@@ -339,7 +339,8 @@ const isPalindrome = (str) => {
 console.log(isPalindrome("mom"));
 console.log(isPalindrome("Man"));
 
-/* 
+
+/* 19 
 Create a function that returns true when num1 is equal to num2; otherwise return false. */
 
 function isSameNum (num1, num2) {
@@ -347,7 +348,7 @@ function isSameNum (num1, num2) {
 }
 console.log(isSameNum(4, 4));
 
-/* Create a function that takes the number of wins, draws and losses and calculates the number of points a football team has obtained so far. */
+/* 20 Create a function that takes the number of wins, draws and losses and calculates the number of points a football team has obtained so far. */
 const footballPoints = (wins, draws, losses) => {
 	let pointsFromWins = wins * 3;
 	let poinsFromDraws = draws * 1;
@@ -356,7 +357,7 @@ const footballPoints = (wins, draws, losses) => {
 }
 console.log(footballPoints(4,2,0));
 
-/* Write a function that takes two integers (hours, minutes), converts them to seconds, and adds them. */
+/* 21 Write a function that takes two integers (hours, minutes), converts them to seconds, and adds them. */
 const convetSeconds = (hours, minutes) => {
 	return (hours * 60) * 60 + (minutes * 60);
 	// return hours * (60 * 60) + (minutes * 60);
@@ -364,7 +365,7 @@ const convetSeconds = (hours, minutes) => {
 }
 console.log(convetSeconds(1, 3));
 
-/* Fix the code in the Code tab so the function returns true if and only if x is equal to 7.
+/* 23 Fix the code in the Code tab so the function returns true if and only if x is equal to 7.
 
 Examples
 isSeven(4) ➞ false
@@ -379,7 +380,7 @@ function isSeven(x) {
 }
 console.log(isSeven(4));
 
-/* Create a function that takes three arguments prob, prize, pay and returns true if prob * prize > pay; otherwise return false.
+/* 24 Create a function that takes three arguments prob, prize, pay and returns true if prob * prize > pay; otherwise return false.
 
 To illustrate:
 
@@ -402,7 +403,7 @@ const profitableGamble = (prob, prize, pay) => prob * prize > pay ? "true" : "fa
 console.log(profitableGamble(4,24,20));
 
 
-/* Create a function that takes a boolean variable flag and returns it as a string.
+/* 25 Create a function that takes a boolean variable flag and returns it as a string.
 
 Examples
 boolToString(true) ➞ "true"
@@ -418,7 +419,7 @@ console.log(boolToNumber(false));
 console.log(boolToNumber(5));
 
 
-/* Create a function that returns the number of frames shown in a given number of minutes for a certain FPS.
+/* 26 Create a function that returns the number of frames shown in a given number of minutes for a certain FPS.
 
 Examples
 frames(1, 1) ➞ 60
@@ -429,16 +430,62 @@ frames(10, 25) ➞ 15000
 Notes
 FPS stands for "frames per second" and it's the number of frames a computer screen shows every second */
 const frames = (minutess, fps) => minutess * 60 * fps;
-console.log( frames(10, 1));
+console.log(frames(10, 1));
 
-/* Create a function that will handle simple math expressions. The input is an expression in the form of a string.
+/* 27 Check Prime Number
+Write a function to determine if a number is prime (a number greater than 1 that has no positive divisors other than 1 and itself).
+ */
 
-Examples
-calculator("23+4") ➞ 27
+/* Steps: 1. A prime number is a natural number greater than 1.
+2. That has no positive divisors other than 1 and itself.
+*/
+function isPrime(num) {
+	//3. Check if num is less than or equal to 1.
+	//4. If it is, num is not a prime number.
+	if (num <= 1) {
+		return false;
+	}
+	//5. Check for factors from 2 up to the square root of num.
+	//6. If any number in this range divides num evenly, then num is not a prime num
+	//7. The reason we check up to the square root is that a larger factor if num
+	//8. would have acorresponding smaller factor that has already ben checked.
+	for (let i = 2; i <= Math.sqrt(num); i++) {
+		//9. If num is divisible by i, it means i is a factor of num.
+		//10. Hence, num is not a prime number
+		if (num % i === 0) {
+			return false;
+		}
+	}
+	return true;
+}
+console.log(isPrime(25));
+console.log(isPrime(29));
 
-calculator("45-15") ➞ 30
 
-calculator("13+2-5*2") ➞ 5
-
-calculator("49/7*2-3") ➞ 11 */
-
+/* 28  Fibonacci Series
+Write a function to generate the Fibonacci sequence up to a certain number of terms.
+ */
+// Examples: Sum of the last 2 numbers will be the next number;
+// 1 1 2 3 5 8 13 21 34.....
+const generateFibonacci = (n) => {
+	//Step 1: Initialize an array to hold the Fibonacci sequence
+	let fibonacciSequence = [];
+	//Step 2: Handle edge cases for n <= 0;
+	if (n <= 0) {
+		return fibonacciSequence;
+	}
+	//Step 3: Add the first term (0) if n >= 1;
+	fibonacciSequence.push(0);
+	//Step 4: Add the second term (1) if n >= 2;
+	if (n > 1) {
+		fibonacciSequence.push(1);
+	}
+	//Step 5: Generate the remaining terms up to n;
+	for(let i = 2; i < n; i++) {
+		//The next term is hte sum of the previous two terms
+		const nextTerm = fibonacciSequence[i -1] + fibonacciSequence[i -2];
+		fibonacciSequence.push(nextTerm);
+	}
+	return fibonacciSequence;
+}
+console.log(generateFibonacci(0));
