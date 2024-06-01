@@ -489,3 +489,48 @@ const generateFibonacci = (n) => {
 	return fibonacciSequence;
 }
 console.log(generateFibonacci(0));
+
+/* 
+29 Create a function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10.
+
+Examples
+makesTen(9, 10) ➞ true
+
+makesTen(9, 9) ➞ false
+
+makesTen(1, 9) ➞ true */
+
+const defMakes10 = (a, b) => {
+	if (a === 10 || b === 10 || a + b === 10) {
+		return true;
+	} else  return false;
+}
+console.log(def(10,0));
+// Or
+const makes10 = (a, b) => a === 10 || b === 10 || a + b === 10;
+
+
+/* 30 A vehicle needs 10 times the amount of fuel than the distance it travels. However, it must always carry a minimum of 100 fuel before setting off.
+
+Create a function which calculates the amount of fuel it needs, given the distance.
+
+Examples
+calculateFuel(15) ➞ 150
+
+calculateFuel(23.5) ➞ 235
+
+calculateFuel(3) ➞ 100
+Notes
+Distance will be a number greater than zero.
+Return 100 if the calculated fuel turns out to be less than 100
+ */
+
+const calculateFuel = (distance) => {
+	// Calculate the fuel required for the given distance
+	const requiredFuel = distance * 10;
+	// Ensure the fuel is at least 100 units
+	return Math.max(requiredFuel, 100);
+	// here if Math.max() returns the maximum value from(requiredFuel, the valu/100), So if required value is maximum then 100 it will return the required value. But if it is less then 100 is max value. Then the function will return the value.
+}
+console.log(calculateFuel(5));
+console.log(calculateFuel(15));
