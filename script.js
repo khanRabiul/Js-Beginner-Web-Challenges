@@ -534,3 +534,69 @@ const calculateFuel = (distance) => {
 }
 console.log(calculateFuel(5));
 console.log(calculateFuel(15));
+
+// 31
+/* Fix the code in the code tab to pass this challenge (only syntax errors). Look at the examples below to get an idea of what the function should do.
+
+Examples
+maxNum(3, 7) ➞ 7
+
+maxNum(-1, 0) ➞ 0
+
+maxNum(1000, 400) ➞ 1000
+Notes
+READ EVERY WORD CAREFULLY, CHARACTER BY CHARACTER!
+ */
+function maxNum(n1, n2) {
+    if (n1 > n2) {
+        return n1;
+    } else if (n1 < n2) {
+        return n2;
+    }
+}
+console.log(maxNum(2,2))
+console.log(maxNum(2,3))
+
+
+// 32
+/* Given two arguments, return an array which contains these two arguments.
+
+Examples
+makePair(1, 2) ➞ [1, 2]
+
+makePair(51, 21) ➞ [51, 21]
+
+makePair(512124, 215) ➞ [512124, 215] */
+
+// Hints: Two araguments will make an array 1st argument will be 1st element 2nd will be second
+
+const makePair = (a, b) =>{
+	return [a, b];
+}
+console.log(makePair(51,21));
+
+//33 
+/* Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+
+Examples
+comp("AB", "CD") ➞ true
+
+comp("ABC", "DE") ➞ false
+
+comp("hello", "edabit") ➞ false
+Notes
+Don't forget to return the result.
+If you get stuck on a challenge, find help in the Resources tab.
+If  */
+
+const comp = (a, b) => {
+ if (a.length === b.length) {
+	return true;
+ } else return false;
+}
+console.log(comp("AB", "CD"));
+// Or
+const comP = (a, b) => {
+	return a.length === b.length;
+}
+console.log(comP("ABC", "DE"));
