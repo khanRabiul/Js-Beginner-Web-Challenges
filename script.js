@@ -600,3 +600,164 @@ const comP = (a, b) => {
 	return a.length === b.length;
 }
 console.log(comP("ABC", "DE"));
+
+//34
+/* Check if an Integer is Divisible By Five
+Create a function that returns true if an integer is evenly divisible by 5, and false otherwise.
+
+Examples
+divisibleByFive(5) ➞ true
+
+divisibleByFive(-55) ➞ true
+
+divisibl */
+const divisibleByFive = (n) => {
+	return n % 5 === 0;
+}
+console.log(divisibleByFive(25));
+console.log(divisibleByFive(26));
+
+//35
+/* Is the String Empty?
+Create a function that returns true if a string is empty and false otherwise.
+
+Examples
+isEmpty("") ➞ true
+
+isEmpty(" ") ➞ false
+
+isEmpty("a") ➞ false
+Notes
+A string containing only whitespaces " " does not count as empty.
+Don't forget to return the result.
+If you get stuck on a challenge, find help in the Resources tab.
+If you're really stuck, unlock solutions in the Solutions tab. */
+const isStringEmpty = (string) => {
+	return string === '';
+}
+console.log(isStringEmpty(""));
+console.log(isStringEmpty("a"));
+
+
+//36
+/* Create a function that takes an integer and returns true if it's divisible by 100, otherwise return false.
+
+Examples
+divisible(1) ➞ false
+
+divisible(1000) ➞ true
+
+divisible(100) ➞ true
+Notes
+Don't forget to return the result.
+If you get stuck on a challenge, find help in the Resources tab.
+ */
+const divisibleBy100 = (num) => {
+	return num % 100 === 0;
+}
+console.log(divisibleBy100(100))
+console.log(divisibleBy100(1000))
+console.log(divisibleBy100(98))
+
+// 37
+/* Write a function that returns the length of a string. Make your function recursive.
+
+Examples
+length("apple") ➞ 5
+
+length("make") ➞ 4
+
+length("a") ➞ 1
+
+length("") ➞ 0
+Notes
+Check the Resources tab for info on recursion. */
+const lengthOfString = (string) =>{
+	return string.length;
+}
+console.log(lengthOfString("Total Length of String"));
+console.log(lengthOfString(""));
+
+// 38
+/* Given two integers, a and b, return true if a can be divided evenly by b. Return false otherwise.
+
+Examples
+dividesEvenly(98, 7) ➞ true
+// 98/7 = 14
+
+dividesEvenly(85, 4) ➞ false
+// 85/4 = 21.25
+Notes
+a will always be greater than or equal to b. */
+const dividesEvenly = (a, b) => {
+	return a % b === 0;
+};
+console.log(dividesEvenly(98, 7));
+console.log(dividesEvenly(85, 4));
+
+// 39
+/* Create a function that takes a string and returns it as an integer.
+
+Examples
+stringInt("6") ➞ 6
+
+stringInt("1000") ➞ 1000
+
+stringInt("12") ➞ 12
+Notes
+All numbers will be whole.
+All numbers will be positive. */
+const stringToNumber = (string) => {
+	// return parseInt(string);
+	return (+string);
+}
+console.log(stringToNumber("5"))
+
+// 40
+/* Create a function that calculates the area of a rectangle. If the arguments are invalid, your function must return -1.
+
+Examples
+area(3, 4) ➞ 12
+
+area(10, 11) ➞ 110
+
+area(-1, 5) ➞ -1
+
+area(0, 2) ➞ -1 */
+const areaOfRectangle = (h, w) => {
+	if(isNaN(h) || h <= 0 || isNaN(w) || w <= 0) {
+		return -1;
+	} else {
+	return h * w;
+	}
+}
+console.log(areaOfRectangle(4,2));
+console.log(areaOfRectangle(4,-5))
+
+// 41
+/* Create a function that evaluates an equation.
+
+Examples
+eq("1+2") ➞ 3
+
+eq("6/(9-7)") ➞ 3
+
+eq("3+2-4") ➞ 1
+Notes
+Don't print, return a value.
+Return the value, not the equation.
+The method used to solve this challenge should not be used in practice. However, it's important to be aware of how this functionality works and why it should not be used. Check the Resources for more information. */
+function eq(expression) {
+    try {
+        // Evaluate the expression using eval()
+        const result = eval(expression);
+        return result;
+    } catch (error) {
+        return "Error: Invalid expression"; // Handle any exceptions
+    }
+}
+
+// Example usage:
+console.log(eq("1+2")); // ➞ 3
+console.log(eq("6/(9-7)")); // ➞ 3
+console.log(eq("3+2-4")); // ➞ 1
