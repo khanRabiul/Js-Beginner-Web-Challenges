@@ -753,7 +753,8 @@ function eq(expression) {
         const result = eval(expression);
         return result;
     } catch (error) {
-        return "Error: Invalid expression"; // Handle any exceptions
+        return "Error: Invalid expression"; // Handle any 
+		exceptions
     }
 }
 
@@ -761,3 +762,80 @@ function eq(expression) {
 console.log(eq("1+2")); // ➞ 3
 console.log(eq("6/(9-7)")); // ➞ 3
 console.log(eq("3+2-4")); // ➞ 1
+
+
+
+/* Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed. This is calculated by subtracting the number of downvotes from upvotes.
+
+Examples
+getVoteCount({ upvotes: 13, downvotes: 0 }) ➞ 13
+
+getVoteCount({ upvotes: 2, downvotes: 33 }) ➞ -31
+
+getVoteCount({ upvotes: 132, downvotes: 132 }) ➞ 0 */
+
+const votes = {
+	upvotes: 33,
+	downvotes: 0
+}
+
+function votesCounts (vote) {
+	return vote.upvotes - vote.downvotes;
+}
+
+console.log(votesCounts(votes));
+
+
+
+/* Create a function that takes a number as an argument and returns negative of that number. Return negative numbers without any change.
+
+Examples
+returnNegative(4) ➞ -4
+
+returnNegative(15) ➞ -15
+
+returnNegative(-4) ➞ -4
+
+returnNegative(0) ➞ 0
+ */
+
+function retrunNegativeNumber(num) {
+	return num >= 0? -num: num;
+}
+console.log(retrunNegativeNumber(5))
+console.log(retrunNegativeNumber(-5))
+console.log(retrunNegativeNumber(0))
+console.log(retrunNegativeNumber(-0))
+
+// Or
+function negativeNumber (num){
+	if (num >= 0) {return -num;}
+	else {return num;}
+}
+console.log(retrunNegativeNumber(5))
+console.log(retrunNegativeNumber(0))
+console.log(retrunNegativeNumber(-0))
+console.log(retrunNegativeNumber(-5));
+
+/* Write a function to reverse an array.
+
+Examples
+reverse([1, 2, 3, 4]) ➞ [4, 3, 2, 1]
+
+reverse([9, 9, 2, 3, 4]) ➞ [4, 3, 2, 9, 9]
+
+reverse([]) ➞ []
+Notes
+Don't forget to return the result. */
+
+const numbers = [1,2,3,4];
+
+const reversed = [...numbers].reverse();
+console.log(reversed);
+
+// Or
+function rev (num) {
+	return num.reverse();
+}
+console.log(rev(numbers));
+console.log(rev([10,11,12,13,14]));
