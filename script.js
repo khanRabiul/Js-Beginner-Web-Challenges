@@ -764,7 +764,7 @@ console.log(eq("6/(9-7)")); // ➞ 3
 console.log(eq("3+2-4")); // ➞ 1
 
 
-
+// 42
 /* Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed. This is calculated by subtracting the number of downvotes from upvotes.
 
 Examples
@@ -786,7 +786,7 @@ function votesCounts (vote) {
 console.log(votesCounts(votes));
 
 
-
+// 43
 /* Create a function that takes a number as an argument and returns negative of that number. Return negative numbers without any change.
 
 Examples
@@ -817,6 +817,7 @@ console.log(retrunNegativeNumber(0))
 console.log(retrunNegativeNumber(-0))
 console.log(retrunNegativeNumber(-5));
 
+// 44
 /* Write a function to reverse an array.
 
 Examples
@@ -839,3 +840,121 @@ function rev (num) {
 }
 console.log(rev(numbers));
 console.log(rev([10,11,12,13,14]));
+
+
+// 45
+/* Write a function that checks whether a person can watch an MA15+ rated movie. One of the following two conditions is required for admittance:
+
+The person is at least 15 years old.
+They have parental supervision.
+The function accepts two parameters, age and isSupervised. Return a boolean.
+
+Examples
+acceptIntoMovie(14, true) ➞ true
+
+acceptIntoMovie(14, false) ➞ false
+
+acceptIntoMovie(16, false) ➞ true
+Notes
+age is a decimal.
+isSupervised is a boolean. */
+
+function acceptIntoMovie (age, isSupervised) {
+	if (age >= 15) {
+		return true;
+	}else if (isSupervised) { // or (isSupervised === true)
+		return true;
+	} else {
+		return false;
+	}
+}
+console.log(acceptIntoMovie(14, true));  
+console.log(acceptIntoMovie(14, false)); 
+console.log(acceptIntoMovie(16, false)); 
+
+// Or
+function acceptIntoMovie1 (age, isSupervised) {
+	if (age >= 15 || isSupervised) {
+		return true;
+	}
+	 else {
+		return false;
+	}
+}
+
+// Or
+function acceptIntoMovie2 (age, isSupervised) {
+	return age >= 15 || isSupervised;
+}
+
+// Or
+
+const acceptIntoMovie4 = (age, isSupervised) => {
+	return age >= 15 || isSupervised;
+}
+
+
+// 46
+/* 
+Create a function that takes an angle in radians and returns the corresponding angle in degrees.
+
+Examples
+radiansToDegrees(1) ➞ 57.29577951308232
+
+radiansToDegrees(20) ➞ 1145.9155902616465
+
+radiansToDegrees(50) ➞ 2864.7889756541163 */
+
+const radiansToDegrees = (radins) => {
+	return radins * (180/Math.PI)
+  } 
+
+// 47
+/* Help fix all the bugs in the function incrementItems! It is intended to add 1 to every element in the array!
+
+Examples
+incrementItems([0, 1, 2, 3]) ➞ [1, 2, 3, 4]
+
+incrementItems([2, 4, 6, 8]) ➞ [3, 5, 7, 9]
+
+incrementItems([-1, -2, -3, -4]) ➞ [0, -1, -2, -3]
+ */
+
+// Problem:
+/* function incrementItems(arr) {
+	for (let i = 0; i < array.length; i++)
+		arr[i] === arr[i] + 1
+	return array
+} */
+
+// Solution
+
+function incrementItems(arr) {
+	for(let i = 0; i < arr.length; i++) {
+		arr[i] += 1;
+	}
+	return arr;
+}
+
+console.log(incrementItems([0, 1, 2, 3]))
+console.log(incrementItems([2, 4, 6, 8]))
+console.log(incrementItems([-1, -2, -3, -4]))
+
+
+//48
+/* A bartender is writing a simple program to determine whether he should serve drinks to someone. He only serves drinks to people 18 and older and when he's not on break.
+
+Given the person's age, and whether break time is in session, create a function which returns whether he should serve drinks.
+
+Examples
+shouldServeDrinks(17, true) ➞ false
+
+shouldServeDrinks(19, false) ➞ true
+ */
+
+const shouldServeDrinks = (age, onBreak) => {
+	return age > 17 && onBreak;
+  }
+console.log(shouldServeDrinks(18, true))
+console.log(shouldServeDrinks(17, true))
+console.log(shouldServeDrinks(25, false))
