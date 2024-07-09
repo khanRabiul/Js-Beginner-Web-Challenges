@@ -958,3 +958,122 @@ const shouldServeDrinks = (age, onBreak) => {
 console.log(shouldServeDrinks(18, true))
 console.log(shouldServeDrinks(17, true))
 console.log(shouldServeDrinks(25, false))
+
+
+// 49
+/* Scientists have discovered that in four decades, the world will EXPLODE! It will also take three decades to make a spaceship to travel to a new planet that can hold the entire world population.
+
+You must calculate the number of people there will be in three decades from now.
+
+The variable population is the world population now.
+Assume that every month, someone gives birth to more people n.
+Return the number of people there will be when the spaceship is complete.
+
+Examples
+futurePeople(256, 2) ➞ 976
+
+futurePeople(3248, 6) ➞ 5408
+
+futurePeople(5240, 3) ➞ 6320
+Notes
+Humanity's fate lies in your calculation. */
+
+const futurePeople = (population , n) =>{
+	const months = 30 * 12; // Nunber of months in three decades
+
+	const newPeople = months * n; // number of people added in the three decades
+
+	const futurePopulation = population + newPeople; // 
+	return futurePopulation;
+}
+
+console.log(futurePeople(200, 2))
+
+
+// 50
+/* Write a template string according to the following example:
+
+Example
+const a = "John";
+const b = "Joe";
+const c = "Jack";
+const template = "your template string" ➞ "Their names were:  John,  Joe  and  Jack." */
+
+const a = "John";
+const b = "Joe";
+const c = "Jack";
+
+const format = (a, b, c) => {
+  const template = `Their names were: ${a}, ${b}, and ${c}.`;
+  return template;
+};
+console.log(format(a, b, c));
+
+
+// 51
+/* In the Code tab you will find code that is missing a single character in order to pass the tests. However, your goal is to submit a function as minimalist as possible. Use the tips in the tips section below.
+
+Write five adder functions:
+
+add2(x) should return 2 + x.
+add3(x) should return 3 + x.
+add5(x) should return 5 + x.
+add7(x) should return 7 + x.
+add11(x) should return 11 + x.
+ */
+/* Tips
+Functions that consist only of a return can be written as a one-liner with an arrow function.
+
+For example, the code:
+
+function areSame(a, b) {
+    return a == b;
+}
+Can be simplified to:
+
+areSame = (a, b) => a == b;
+Bonus
+(a, b) => a == b is technically an anonymous function. However, it can be assigned to the identifier areSame and it can then be called using areSame().
+ */
+
+function add3(x) {
+	return x + 3;
+}
+
+function add5(x) {
+	return x + 5;
+}
+
+function add7(x) {
+	return x + 7;
+}
+
+function add11(x) {
+	return x + 1;
+}
+
+// Or
+
+const add2 = x=> x + 2;
+const add3 = x=> x + 3;
+const add5 = x=> x + 5;
+const add7 = x=> x + 7;
+const add11 = x=> x + 11;
+
+console.log(add2(5));   // ➞ 7
+console.log(add3(5));   // ➞ 8
+console.log(add5(5));   // ➞ 10
+console.log(add7(5));   // ➞ 12
+console.log(add11(5));  // ➞ 16
+
+// 52
+/* Write a function that uses the ternary operator to return "yeah" if bool is true, and "nope" otherwise.
+
+Examples
+yeah_nope(true) ➞ "yeah"
+
+yeah_nope(false) ➞ "nope" */
+
+const yeahOrNope = (bool) => {
+	return bool === true ? "yeah" : "Nope";
+}
