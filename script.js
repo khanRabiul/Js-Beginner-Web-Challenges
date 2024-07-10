@@ -1077,3 +1077,59 @@ yeah_nope(false) ➞ "nope" */
 const yeahOrNope = (bool) => {
 	return bool === true ? "yeah" : "Nope";
 }
+
+// 53
+/* Check the principles of minimalist code in the intro to the first challenge.
+
+In the Code tab you will find a code that is missing a single character in order to pass the tests. However, your goal is to submit a function as minimalist as possible. Use the tips in the tips section below.
+
+Write a function that returns the boolean true if the given number is zero, the string "p */
+
+/* Problem:
+	function equilbrium (x) {
+	if (x > 0) {
+		return "positive"
+	} else if (x < 0) {
+		return "negative"
+	} else {
+		return true
+	}
+} */
+
+// Solution 01
+function equilbrium1 (num) {
+	if (num === 0) {
+		return "true";
+	} else if (num < 0) {
+		return "negative";
+	} else {
+		return "positive";
+	}
+}
+
+// Solution 02
+
+function equilbrium2 (num) {
+	switch(true){
+		case num === 0:
+			return "true";
+			break;
+		case num < 0:
+			return "negative";
+			break;
+		case num > 0:
+			return "positive";
+			default:
+				return "Invalid Number";
+	}
+}
+
+
+// Solution 03
+const equilbrium4 = (num) => {
+	return num > 0? "positive": num < 0? "negeative": "true";
+}
+// Solution 04
+const equilbrium3 = (num) => {
+	return num > 0? "positive": num < 0? "negeative": num === 0? "true":"Invalid Number";
+}
