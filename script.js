@@ -1133,3 +1133,47 @@ const equilbrium4 = (num) => {
 const equilbrium3 = (num) => {
 	return num > 0? "positive": num < 0? "negeative": num === 0? "true":"Invalid Number";
 }
+
+// 54 
+/* Given a string, return true if its length is even or false if the length is odd. */
+
+const oddOrEven = (str) => {
+	return str.length % 2 === 0 ? true : false;
+}
+console.log(oddOrEven("hello"));
+
+
+
+// 55
+/* You can assign variables from arrays like this:
+
+const arr = [1, 2, 3, 4, 5, 6]
+let a = arr[0]
+let b = arr[1]
+
+console.log(a) // outputs 1
+console.log(b) // outputs 2
+With ES6, you can assign variables from arrays in a much more succinct way. Create variables a and b from the given array using the ES6 destructuring assignment syntax, where a === 1 and b === 2. */
+
+const desArr = [1,2,3,4,5,6]
+const [x,y] = desArr;
+console.log(a); 
+console.log(b); 
+
+
+
+// 56 ES6: Destructuring Arrays I
+// You can assign variables from arrays like this:
+
+// const arr = [1, 2, 3, 4, 5, 6]
+// let a = arr[0]
+// let b = arr[1]
+
+// console.log(a) // outputs 1
+// console.log(b) // outputs 2
+// With ES6, you can assign variables from arrays in a much more succinct way. Create variables a and b from the given array using the ES6 destructuring assignment syntax, where a === 1 and b === 2.
+
+const arr = [1, 2, 3, 4, 5, 6]
+const  [a,b] =arr ;
+console.log(a)
+console.log(b)
