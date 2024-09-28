@@ -1177,3 +1177,31 @@ const arr = [1, 2, 3, 4, 5, 6]
 const  [a,b] =arr ;
 console.log(a)
 console.log(b)
+
+
+// 57 Inches to Feet
+/* Create a function that accepts a measurement value in inches and returns the equivalent of the measurement value in feet.
+
+Examples
+inchesToFeet(324) ➞ 27
+
+inchesToFeet(12) ➞ 1
+
+inchesToFeet(36) ➞ 3
+Notes
+If inches are under 12, return 0.
+12 inches = 1 foot. */
+
+// Example 1:
+const inchesToFeet = (inc) => {
+	if (inc < 12) {
+	  return 0;
+	} else {
+	  return inc / 12;
+	}
+  }
+
+// Or
+const inchesToFeet = (inc) =>  inc < 12 ? 0 : inc / 12;
+console.log(inchesToFeet(324)) // 27
+console.log(inchesToFeet(3)) // 0
