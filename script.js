@@ -1259,7 +1259,7 @@ const calculateExponent = (base, exponent) => {
   console.log(calculateExponent(3, 3)); // 27
   
 
-  // 60 Return the Last Element in an Array
+// 60 Return the Last Element in an Array
   /* Create a function that accepts an array and returns the last item in the array.
 
 Examples
@@ -1276,3 +1276,44 @@ If you're really stuck, unlock solutions in the Solutions tab. */
 const lastArrayItem = (arr) => {
 	return arr[arr.length -1];
   } 
+
+
+// 61  String and Number Conversions
+
+/* You need to create two functions to substitute toString() and parseInt(); A function called intToString() that converts integers into strings and a function called stringToInt() that converts strings into integers.
+
+Examples:
+intToString(4) ➞ "4"
+
+stringToInt("4") ➞ 4
+
+intToString(29348) ➞ "29348"
+Notes
+You will get bonus points if you manage to solve this without using toString, parseInt or parseFloat. */
+
+const intoString = (num) => {
+    return num.toString();
+} 
+
+const intoNum = (str) => {
+    return parseInt(str)
+} 
+
+// Or
+const intToString = (num) => {
+	return num + ""; // Concatenates the number with an empty string, turning it into a string
+  };
+  
+  // Examples:
+  console.log(intToString(4)); // "4"
+  console.log(intToString(29348)); // "29348"
+  
+
+  const stringToInt = (str) => {
+	return str * 1; // Multiplies the string by 1, converting it to a number
+  };
+  
+  // Examples:
+  console.log(stringToInt("4")); // 4
+  console.log(stringToInt("29348")); // 29348
+  
