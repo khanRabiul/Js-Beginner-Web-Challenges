@@ -1233,3 +1233,28 @@ const howManyWalls = (n, w, h) => {
 	const walls = n / (w * h);
   return Math.floor(walls);
   } 
+
+  // 59 To the Power of 
+  /* Create a function that takes a base number and an exponent number and returns the calculation.
+
+Examples
+calculateExponent(5, 5) ➞ 3125
+
+calculateExponent(10, 10) ➞ 10000000000
+
+calculateExponent(3, 3) ➞ 27
+Notes
+All test inputs will be positive integers
+Don't forget to return the result.
+If you get stuck on a challenge, find help in the Resources tab.
+If you're really stuck, unlock solutions in the Solutions tab. */
+
+const calculateExponent = (base, exponent) => {
+	return Math.pow(base, exponent);
+  };
+  
+  // Examples:
+  console.log(calculateExponent(5, 5)); // 3125
+  console.log(calculateExponent(10, 10)); // 10000000000
+  console.log(calculateExponent(3, 3)); // 27
+  
