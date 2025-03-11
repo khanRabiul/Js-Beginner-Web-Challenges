@@ -1336,4 +1336,14 @@ concatName("First", "Last")
 concatName("John", "Doe")
 concatName("Mary", "Jane")
 
-// 64
+// 64 Buggy Code
+/* The challenge is to try and fix this buggy code, given the inputs true and false. See the examples below for the expected output.*/
+const has_bugs = (buggy_code) => {
+	if (buggy_code) {
+		return 'sad days'
+	} else {
+		return `it's a good day`
+	}
+} 
+has_bugs(true) 
+has_bugs(false)
