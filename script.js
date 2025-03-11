@@ -1317,3 +1317,11 @@ const intToString = (num) => {
   console.log(stringToInt("4")); // 4
   console.log(stringToInt("29348")); // 29348
   
+// Return a String as an Integer
+/*Create a function that takes a string and returns it as an integer.*/
+const stringInt = (str) => {
+  return parseInt(str)
+} 
+stringInt("6") 
+stringInt("1000") 
+stringInt("12") 
