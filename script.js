@@ -1344,6 +1344,19 @@ const has_bugs = (buggy_code) => {
 	} else {
 		return `it's a good day`
 	}
-} 
-has_bugs(true) 
+}
+has_bugs(true)
 has_bugs(false)
+
+// 65 Fix the Bug: Simple Array Manipulation
+/*Help fix all the bugs in the function incrementItems! It is intended to add 1 to every element in the array! */
+function incrementItems(arr) {
+	for (let i = 0; i < arr.length; i++) {
+		arr[i] += 1;
+	}
+	return arr;
+}
+
+console.log(incrementItems([0, 1, 2, 3]))
+console.log(incrementItems([2, 4, 6, 8]))
+console.log(incrementItems([-1, -2, -3, -4]))
