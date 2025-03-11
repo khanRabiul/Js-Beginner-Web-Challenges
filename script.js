@@ -1,10 +1,10 @@
 //01 Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
-function lessThan100(a,b) {
-    if(a + b < 100){
-        return true;
-    } else {
-        return false;
-    }
+function lessThan100(a, b) {
+	if (a + b < 100) {
+		return true;
+	} else {
+		return false;
+	}
 }
 const res = lessThan100(20, 50);
 console.log(res);
@@ -14,55 +14,55 @@ console.log(res);
 /* function nameString(name){
 	var b == "Edabit"
 	var result == name + b
-  	return result
+		return result
 } */
 // Solution 01
-function nameString(name){
+function nameString(name) {
 	var b = "Edabit"
 	var result = name.concat(b);
-  	return result;
+	return result;
 }
 //Or
 // Solution 02
- const nameString1 = name1 => `${name1}Edabit`;
+const nameString1 = name1 => `${name1}Edabit`;
 
- /*03 In this challenge, a farmer is asking you to tell him how many legs can be counted among all his animals. The farmer breeds three species:
+/*03 In this challenge, a farmer is asking you to tell him how many legs can be counted among all his animals. The farmer breeds three species:
 
- chickens = 2 legs
- cows = 4 legs
- pigs = 4 legs */
+chickens = 2 legs
+cows = 4 legs
+pigs = 4 legs */
 // Solution 01
- function animals (chickens, cows, pigs) {
+function animals(chickens, cows, pigs) {
 	return (chickens * 2) + (cows * 4) + (pigs * 4);
- }
- console.log(animals(2,2,2));
+}
+console.log(animals(2, 2, 2));
 // Or
 // Solution 02
 const animal = (chikens, cows, pigs) => (chikens * 2) + (cows * 4) + (pigs * 4);
- console.log(animals(2,2,2));
+console.log(animals(2, 2, 2));
 // Solution 03
 const anim = (chickens, cows, pigs) => chickens * 2 + (cows + pigs) * 4;
 
 /*04 Create a function that takes length and width and finds the perimeter of a rectangle. */
-function findPerimeter(length, width){
-	return 2 *(length + width);
+function findPerimeter(length, width) {
+	return 2 * (length + width);
 }
-console.log(findPerimeter(6,4));
+console.log(findPerimeter(6, 4));
 
 //05 Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers.
 function nextEdge(side1, side2) {
-	return (side1 + side2) - 1;	
+	return (side1 + side2) - 1;
 }
-console.log(nextEdge(8,10));
+console.log(nextEdge(8, 10));
 
 //06 Write a function that returns the string "something" joined with a space " " and the given argument a.
-function giveMeSometing (a) {
+function giveMeSometing(a) {
 	return "something" + " " + a;
 }
 console.log(giveMeSometing("is better than nothing"));
 // Or if we want the first character of "a" is convertted to lower case
 
-function giveMeSometingLowCase (a) {
+function giveMeSometingLowCase(a) {
 	const formattedArg = a.charAt(0).toLowerCase() + a.slice(1);
 	return "something " + formattedArg;
 }
@@ -77,7 +77,7 @@ points(7, 5) ➞ 29
 
 points(38, 8) ➞ 100 */
 const points = (twoPointers, threePointers) => (2 * twoPointers) + (3 * threePointers);
-console.log(points(1,1));
+console.log(points(1, 1));
 /* 08
 Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
 
@@ -113,17 +113,17 @@ swap(44, 33) ➞ [33, 44]
 
 swap(21, 12) ➞ [12, 21] */
 
-function swap (a,b) {
-	 // Use a temporary variable to hold the value of 'a'
+function swap(a, b) {
+	// Use a temporary variable to hold the value of 'a'
 	let temp = a;
-	 // Assign the value of 'b' to 'a'
+	// Assign the value of 'b' to 'a'
 	a = b;
-	 // Assign the temporary value (initial 'a') to 'b'
+	// Assign the temporary value (initial 'a') to 'b'
 	b = temp;
-	 // Return an array containing the swapped values
-	return [a,b];
+	// Return an array containing the swapped values
+	return [a, b];
 }
-console.log(swap(100,200));
+console.log(swap(100, 200));
 
 /*10  JavaScript has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
 
@@ -147,12 +147,13 @@ and(false, true) ➞ false
 
 and(false, false) ➞ false */
 function and(a, b) {
-	if(a === true && b === true) {
+	if (a === true && b === true) {
 		console.log("true");
 		return true;
 	} else {
-		console.log("false")};
-		return false;
+		console.log("false")
+	};
+	return false;
 }
 console.log(and("true", "false"));
 console.log(and("true", "true"));
@@ -162,8 +163,8 @@ console.log(and("true", "true"));
 FizzBuzz
 Write a program that prints the numbers from 1 to 100. But for multiples of three, print "Fizz" instead of the number, and for the multiples of five, print "Buzz". For numbers that are multiples of both three and five, print "FizzBuzz". */
 const fizzBuzz = () => {
-	for (i = 1; i <=100; i++) {
-		if (i % 3 === 0 && i % 5 === 0){
+	for (i = 1; i <= 100; i++) {
+		if (i % 3 === 0 && i % 5 === 0) {
 			console.log("FizzBuzz");
 		} else if (i % 3 === 0) {
 			console.log("Fizz");
@@ -177,11 +178,11 @@ const fizzBuzz = () => {
 fizzBuzz();
 
 const fizzBuzzor = () => {
-	for (i = 1; i <=100; i++) {
-		if (i % 3 === 0 && i % 5 === 0){
+	for (i = 1; i <= 100; i++) {
+		if (i % 3 === 0 && i % 5 === 0) {
 			return ("FizzBuzz");
 		} else if (i % 3 === 0) {
-			return("Fizz");
+			return ("Fizz");
 		} else if (i % 5 === 0) {
 			return ("Buzz");
 		} else {
@@ -213,7 +214,7 @@ const countVowels = (str) => {
 	// converting input(str) to lowercase
 	str = str.toLowerCase();
 	for (let char of str) {
-		if (char === 'a' || char === 'e' || char === 'i'|| char === 'o' || char === 'u') {
+		if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
 			count++;
 		}
 	}
@@ -225,7 +226,7 @@ console.log(countVowels("Suliman Khan"));
 Write a function that finds the maximum number in an array of numbers.
  <<<<<<<<<<<<<<<*/
 
-const maxNumber = [54,45,47,45,5,540,245,21,54,1,5,4,45];
+const maxNumber = [54, 45, 47, 45, 5, 540, 245, 21, 54, 1, 5, 4, 45];
 const maxNumberMax = Math.max(...maxNumber);
 console.log(maxNumberMax);
 
@@ -234,7 +235,7 @@ console.log(maxNumberApply);
 
 const maxNumberLoop = (number) => {
 	let max = number[0];
-	for(let i = 0; i < number.length; i++){
+	for (let i = 0; i < number.length; i++) {
 		if (number[i] > max) {
 			max = number[i];
 		}
@@ -260,29 +261,29 @@ console.log(maxNumber1);
 
 let minNumber2 = array[0] //Assume the first element as initial minimum
 for (let i = 1; i < array.length; i++) {
-    if(array[i] < minNumber2) {  //if find any smaller number
-        minNumber2 = array[i];  // stored it 
-    }
+		if(array[i] < minNumber2) {  //if find any smaller number
+				minNumber2 = array[i];  // stored it 
+		}
 }
 console.log(minNumber2);
 
 let maxNumber2 = array[0]; //Assume the first element as initial maximum
 for (let i = 1; i < array.length; i++) {
-    if (array[i] >  maxNumber2) { //if find any big number
-        maxNumber2 = array[i];  // stored it 
-    }
+		if (array[i] >  maxNumber2) { //if find any big number
+				maxNumber2 = array[i];  // stored it 
+		}
 }
 console.log(maxNumber2);
 
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 /* Write a function that finds the sum of all elements in an array of numbers. */
-const arraySum = [45,584,54,5,1,245,4,421];
+const arraySum = [45, 584, 54, 5, 1, 245, 4, 421];
 const arraySumFunction = (numbers) => {
 	let sum = 0;
-	for (let i= 0; i < numbers.length; i++) {
+	for (let i = 0; i < numbers.length; i++) {
 		// sum = sum + numbers[i];
-		sum +=numbers[i];
+		sum += numbers[i];
 	}
 	return sum;
 }
@@ -293,7 +294,7 @@ console.log(resArraySum);
 Write a function that reverses a string without using the built-in reverse method
  */
 const stringReverse = "Khan Rabiul Islam"
-const stringReversed =(char) => {
+const stringReversed = (char) => {
 	const charArray = char.toLowerCase().split("");
 	const reversed = charArray.reverse();
 	const joint = reversed.join("");
@@ -303,10 +304,10 @@ console.log(stringReversed(stringReverse));
 
 /* 16 Write a function that removes duplicates from an array and returns a new array without duplicates. */
 
-const duplicates = [4,15,452,154,4,54,4,2,2,2,77,88,77,4];
+const duplicates = [4, 15, 452, 154, 4, 54, 4, 2, 2, 2, 77, 88, 77, 4];
 const removeDuplicates = (array) => {
 	let uniqueArray = [];
-	array.forEach((element)=> {
+	array.forEach((element) => {
 		if (!uniqueArray.includes(element)) {
 			uniqueArray.push(element);
 		}
@@ -332,7 +333,7 @@ console.log(getFactorial(4));
 Write a function to determine if a word or phrase is a palindrome (reads the same backward as forward). Ignore spaces and non-alphanumeric characters.
  */
 const isPalindrome = (str) => {
-	const cleanedStr = str.replace(/[^A-Za-z0-9]/g,"").toLowerCase();
+	const cleanedStr = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
 
 	return cleanedStr === cleanedStr.split('').reverse().join('');
 };
@@ -343,7 +344,7 @@ console.log(isPalindrome("Man"));
 /* 19 
 Create a function that returns true when num1 is equal to num2; otherwise return false. */
 
-function isSameNum (num1, num2) {
+function isSameNum(num1, num2) {
 	return num1 === num2;
 }
 console.log(isSameNum(4, 4));
@@ -355,13 +356,13 @@ const footballPoints = (wins, draws, losses) => {
 	let totalPoins = pointsFromWins + poinsFromDraws;
 	return totalPoins;
 }
-console.log(footballPoints(4,2,0));
+console.log(footballPoints(4, 2, 0));
 
 /* 21 Write a function that takes two integers (hours, minutes), converts them to seconds, and adds them. */
 const convetSeconds = (hours, minutes) => {
 	return (hours * 60) * 60 + (minutes * 60);
 	// return hours * (60 * 60) + (minutes * 60);
-	
+
 }
 console.log(convetSeconds(1, 3));
 
@@ -375,8 +376,8 @@ isSeven(9) ➞ false
 isSeven(7) ➞ true */
 
 function isSeven(x) {
-	return x  === 7 ? "true":"false";
-	
+	return x === 7 ? "true" : "false";
+
 }
 console.log(isSeven(4));
 
@@ -400,7 +401,7 @@ profitableGamble(0.9, 3, 2) ➞ true */
 console.log(profitableGamble(4,24,20)); */
 
 const profitableGamble = (prob, prize, pay) => prob * prize > pay ? "true" : "false";
-console.log(profitableGamble(4,24,20));
+console.log(profitableGamble(4, 24, 20));
 
 
 /* 25 Create a function that takes a boolean variable flag and returns it as a string.
@@ -481,9 +482,9 @@ const generateFibonacci = (n) => {
 		fibonacciSequence.push(1);
 	}
 	//Step 5: Generate the remaining terms up to n;
-	for(let i = 2; i < n; i++) {
+	for (let i = 2; i < n; i++) {
 		//The next term is hte sum of the previous two terms
-		const nextTerm = fibonacciSequence[i -1] + fibonacciSequence[i -2];
+		const nextTerm = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
 		fibonacciSequence.push(nextTerm);
 	}
 	return fibonacciSequence;
@@ -503,9 +504,9 @@ makesTen(1, 9) ➞ true */
 const defMakes10 = (a, b) => {
 	if (a === 10 || b === 10 || a + b === 10) {
 		return true;
-	} else  return false;
+	} else return false;
 }
-console.log(def(10,0));
+console.log(def(10, 0));
 // Or
 const makes10 = (a, b) => a === 10 || b === 10 || a + b === 10;
 
@@ -548,14 +549,14 @@ Notes
 READ EVERY WORD CAREFULLY, CHARACTER BY CHARACTER!
  */
 function maxNum(n1, n2) {
-    if (n1 > n2) {
-        return n1;
-    } else if (n1 < n2) {
-        return n2;
-    }
+	if (n1 > n2) {
+		return n1;
+	} else if (n1 < n2) {
+		return n2;
+	}
 }
-console.log(maxNum(2,2))
-console.log(maxNum(2,3))
+console.log(maxNum(2, 2))
+console.log(maxNum(2, 3))
 
 
 // 32
@@ -570,10 +571,10 @@ makePair(512124, 215) ➞ [512124, 215] */
 
 // Hints: Two araguments will make an array 1st argument will be 1st element 2nd will be second
 
-const makePair = (a, b) =>{
+const makePair = (a, b) => {
 	return [a, b];
 }
-console.log(makePair(51,21));
+console.log(makePair(51, 21));
 
 //33 
 /* Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
@@ -590,9 +591,9 @@ If you get stuck on a challenge, find help in the Resources tab.
 If  */
 
 const comp = (a, b) => {
- if (a.length === b.length) {
-	return true;
- } else return false;
+	if (a.length === b.length) {
+		return true;
+	} else return false;
 }
 console.log(comp("AB", "CD"));
 // Or
@@ -672,7 +673,7 @@ length("a") ➞ 1
 length("") ➞ 0
 Notes
 Check the Resources tab for info on recursion. */
-const lengthOfString = (string) =>{
+const lengthOfString = (string) => {
 	return string.length;
 }
 console.log(lengthOfString("Total Length of String"));
@@ -725,14 +726,14 @@ area(-1, 5) ➞ -1
 
 area(0, 2) ➞ -1 */
 const areaOfRectangle = (h, w) => {
-	if(isNaN(h) || h <= 0 || isNaN(w) || w <= 0) {
+	if (isNaN(h) || h <= 0 || isNaN(w) || w <= 0) {
 		return -1;
 	} else {
-	return h * w;
+		return h * w;
 	}
 }
-console.log(areaOfRectangle(4,2));
-console.log(areaOfRectangle(4,-5))
+console.log(areaOfRectangle(4, 2));
+console.log(areaOfRectangle(4, -5))
 
 // 41
 /* Create a function that evaluates an equation.
@@ -748,14 +749,14 @@ Don't print, return a value.
 Return the value, not the equation.
 The method used to solve this challenge should not be used in practice. However, it's important to be aware of how this functionality works and why it should not be used. Check the Resources for more information. */
 function eq(expression) {
-    try {
-        // Evaluate the expression using eval()
-        const result = eval(expression);
-        return result;
-    } catch (error) {
-        return "Error: Invalid expression"; // Handle any 
+	try {
+		// Evaluate the expression using eval()
+		const result = eval(expression);
+		return result;
+	} catch (error) {
+		return "Error: Invalid expression"; // Handle any 
 		exceptions
-    }
+	}
 }
 
 // Example usage:
@@ -779,7 +780,7 @@ const votes = {
 	downvotes: 0
 }
 
-function votesCounts (vote) {
+function votesCounts(vote) {
 	return vote.upvotes - vote.downvotes;
 }
 
@@ -800,7 +801,7 @@ returnNegative(0) ➞ 0
  */
 
 function retrunNegativeNumber(num) {
-	return num >= 0? -num: num;
+	return num >= 0 ? -num : num;
 }
 console.log(retrunNegativeNumber(5))
 console.log(retrunNegativeNumber(-5))
@@ -808,9 +809,9 @@ console.log(retrunNegativeNumber(0))
 console.log(retrunNegativeNumber(-0))
 
 // Or
-function negativeNumber (num){
-	if (num >= 0) {return -num;}
-	else {return num;}
+function negativeNumber(num) {
+	if (num >= 0) { return -num; }
+	else { return num; }
 }
 console.log(retrunNegativeNumber(5))
 console.log(retrunNegativeNumber(0))
@@ -829,17 +830,17 @@ reverse([]) ➞ []
 Notes
 Don't forget to return the result. */
 
-const numbers = [1,2,3,4];
+const numbers = [1, 2, 3, 4];
 
 const reversed = [...numbers].reverse();
 console.log(reversed);
 
 // Or
-function rev (num) {
+function rev(num) {
 	return num.reverse();
 }
 console.log(rev(numbers));
-console.log(rev([10,11,12,13,14]));
+console.log(rev([10, 11, 12, 13, 14]));
 
 
 // 45
@@ -859,31 +860,31 @@ Notes
 age is a decimal.
 isSupervised is a boolean. */
 
-function acceptIntoMovie (age, isSupervised) {
+function acceptIntoMovie(age, isSupervised) {
 	if (age >= 15) {
 		return true;
-	}else if (isSupervised) { // or (isSupervised === true)
+	} else if (isSupervised) { // or (isSupervised === true)
 		return true;
 	} else {
 		return false;
 	}
 }
-console.log(acceptIntoMovie(14, true));  
-console.log(acceptIntoMovie(14, false)); 
-console.log(acceptIntoMovie(16, false)); 
+console.log(acceptIntoMovie(14, true));
+console.log(acceptIntoMovie(14, false));
+console.log(acceptIntoMovie(16, false));
 
 // Or
-function acceptIntoMovie1 (age, isSupervised) {
+function acceptIntoMovie1(age, isSupervised) {
 	if (age >= 15 || isSupervised) {
 		return true;
 	}
-	 else {
+	else {
 		return false;
 	}
 }
 
 // Or
-function acceptIntoMovie2 (age, isSupervised) {
+function acceptIntoMovie2(age, isSupervised) {
 	return age >= 15 || isSupervised;
 }
 
@@ -906,8 +907,8 @@ radiansToDegrees(20) ➞ 1145.9155902616465
 radiansToDegrees(50) ➞ 2864.7889756541163 */
 
 const radiansToDegrees = (radins) => {
-	return radins * (180/Math.PI)
-  } 
+	return radins * (180 / Math.PI)
+}
 
 // 47
 /* Help fix all the bugs in the function incrementItems! It is intended to add 1 to every element in the array!
@@ -930,7 +931,7 @@ incrementItems([-1, -2, -3, -4]) ➞ [0, -1, -2, -3]
 // Solution
 
 function incrementItems(arr) {
-	for(let i = 0; i < arr.length; i++) {
+	for (let i = 0; i < arr.length; i++) {
 		arr[i] += 1;
 	}
 	return arr;
@@ -954,7 +955,7 @@ shouldServeDrinks(19, false) ➞ true
 
 const shouldServeDrinks = (age, onBreak) => {
 	return age > 17 && onBreak;
-  }
+}
 console.log(shouldServeDrinks(18, true))
 console.log(shouldServeDrinks(17, true))
 console.log(shouldServeDrinks(25, false))
@@ -978,7 +979,7 @@ futurePeople(5240, 3) ➞ 6320
 Notes
 Humanity's fate lies in your calculation. */
 
-const futurePeople = (population , n) =>{
+const futurePeople = (population, n) => {
 	const months = 30 * 12; // Nunber of months in three decades
 
 	const newPeople = months * n; // number of people added in the three decades
@@ -1004,8 +1005,8 @@ const b = "Joe";
 const c = "Jack";
 
 const format = (a, b, c) => {
-  const template = `Their names were: ${a}, ${b}, and ${c}.`;
-  return template;
+	const template = `Their names were: ${a}, ${b}, and ${c}.`;
+	return template;
 };
 console.log(format(a, b, c));
 
@@ -1027,7 +1028,7 @@ Functions that consist only of a return can be written as a one-liner with an ar
 For example, the code:
 
 function areSame(a, b) {
-    return a == b;
+		return a == b;
 }
 Can be simplified to:
 
@@ -1054,11 +1055,11 @@ function add11(x) {
 
 // Or
 
-const add2 = x=> x + 2;
-const add3 = x=> x + 3;
-const add5 = x=> x + 5;
-const add7 = x=> x + 7;
-const add11 = x=> x + 11;
+const add2 = x => x + 2;
+const add3 = x => x + 3;
+const add5 = x => x + 5;
+const add7 = x => x + 7;
+const add11 = x => x + 11;
 
 console.log(add2(5));   // ➞ 7
 console.log(add3(5));   // ➞ 8
@@ -1097,7 +1098,7 @@ Write a function that returns the boolean true if the given number is zero, the 
 } */
 
 // Solution 01
-function equilbrium1 (num) {
+function equilbrium1(num) {
 	if (num === 0) {
 		return "true";
 	} else if (num < 0) {
@@ -1109,8 +1110,8 @@ function equilbrium1 (num) {
 
 // Solution 02
 
-function equilbrium2 (num) {
-	switch(true){
+function equilbrium2(num) {
+	switch (true) {
 		case num === 0:
 			return "true";
 			break;
@@ -1119,19 +1120,19 @@ function equilbrium2 (num) {
 			break;
 		case num > 0:
 			return "positive";
-			default:
-				return "Invalid Number";
+		default:
+			return "Invalid Number";
 	}
 }
 
 
 // Solution 03
 const equilbrium4 = (num) => {
-	return num > 0? "positive": num < 0? "negeative": "true";
+	return num > 0 ? "positive" : num < 0 ? "negeative" : "true";
 }
 // Solution 04
 const equilbrium3 = (num) => {
-	return num > 0? "positive": num < 0? "negeative": num === 0? "true":"Invalid Number";
+	return num > 0 ? "positive" : num < 0 ? "negeative" : num === 0 ? "true" : "Invalid Number";
 }
 
 // 54 
@@ -1155,10 +1156,10 @@ console.log(a) // outputs 1
 console.log(b) // outputs 2
 With ES6, you can assign variables from arrays in a much more succinct way. Create variables a and b from the given array using the ES6 destructuring assignment syntax, where a === 1 and b === 2. */
 
-const desArr = [1,2,3,4,5,6]
-const [x,y] = desArr;
-console.log(a); 
-console.log(b); 
+const desArr = [1, 2, 3, 4, 5, 6]
+const [x, y] = desArr;
+console.log(a);
+console.log(b);
 
 
 
@@ -1174,7 +1175,7 @@ console.log(b);
 // With ES6, you can assign variables from arrays in a much more succinct way. Create variables a and b from the given array using the ES6 destructuring assignment syntax, where a === 1 and b === 2.
 
 const arr = [1, 2, 3, 4, 5, 6]
-const  [a,b] =arr ;
+const [a, b] = arr;
 console.log(a)
 console.log(b)
 
@@ -1195,24 +1196,24 @@ If inches are under 12, return 0.
 // Example 1:
 const inchesToFeet = (inc) => {
 	if (inc < 12) {
-	  return 0;
+		return 0;
 	} else {
-	  return inc / 12;
+		return inc / 12;
 	}
-  }
+}
 
 // Or
 // Example 2:
 // const inchesToFeet = (inc) =>  inc < 12 ? 0 : inc / 12;
 
 console.log(inchesToFeet(324))
- // 27
+// 27
 console.log(inchesToFeet(3))
- // 0
+// 0
 
 
- // 58 
- //I'd Like a New Shade of Blue, Please
+// 58 
+//I'd Like a New Shade of Blue, Please
 /* 
  I have a bucket containing an amount of navy blue paint and I'd like to paint as many walls as possible. Create a function that returns the number of complete walls that I can paint, before I need to head to the shops to buy more.
 
@@ -1231,11 +1232,11 @@ All numbers will be positive integers. */
 
 const howManyWalls = (n, w, h) => {
 	const walls = n / (w * h);
-  return Math.floor(walls);
-  } 
+	return Math.floor(walls);
+}
 
-  // 59 To the Power of 
-  /* Create a function that takes a base number and an exponent number and returns the calculation.
+// 59 To the Power of 
+/* Create a function that takes a base number and an exponent number and returns the calculation.
 
 Examples
 calculateExponent(5, 5) ➞ 3125
@@ -1251,16 +1252,16 @@ If you're really stuck, unlock solutions in the Solutions tab. */
 
 const calculateExponent = (base, exponent) => {
 	return Math.pow(base, exponent);
-  };
-  
-  // Examples:
-  console.log(calculateExponent(5, 5)); // 3125
-  console.log(calculateExponent(10, 10)); // 10000000000
-  console.log(calculateExponent(3, 3)); // 27
-  
+};
+
+// Examples:
+console.log(calculateExponent(5, 5)); // 3125
+console.log(calculateExponent(10, 10)); // 10000000000
+console.log(calculateExponent(3, 3)); // 27
+
 
 // 60 Return the Last Element in an Array
-  /* Create a function that accepts an array and returns the last item in the array.
+/* Create a function that accepts an array and returns the last item in the array.
 
 Examples
 getLastItem([1, 2, 3]) ➞ 3
@@ -1274,8 +1275,8 @@ If you get stuck on a challenge, find help in the Resources tab.
 If you're really stuck, unlock solutions in the Solutions tab. */
 
 const lastArrayItem = (arr) => {
-	return arr[arr.length -1];
-  } 
+	return arr[arr.length - 1];
+}
 
 
 // 61  String and Number Conversions
@@ -1292,36 +1293,47 @@ Notes
 You will get bonus points if you manage to solve this without using toString, parseInt or parseFloat. */
 
 const intoString = (num) => {
-    return num.toString();
-} 
+	return num.toString();
+}
 
 const intoNum = (str) => {
-    return parseInt(str)
-} 
+	return parseInt(str)
+}
 
 // Or
 const intToString = (num) => {
 	return num + ""; // Concatenates the number with an empty string, turning it into a string
-  };
-  
-  // Examples:
-  console.log(intToString(4)); // "4"
-  console.log(intToString(29348)); // "29348"
-  
+};
 
-  const stringToInt = (str) => {
+// Examples:
+console.log(intToString(4)); // "4"
+console.log(intToString(29348)); // "29348"
+
+
+const stringToInt = (str) => {
 	return str * 1; // Multiplies the string by 1, converting it to a number
-  };
-  
-  // Examples:
-  console.log(stringToInt("4")); // 4
-  console.log(stringToInt("29348")); // 29348
-  
-// Return a String as an Integer
+};
+
+// Examples:
+console.log(stringToInt("4")); // 4
+console.log(stringToInt("29348")); // 29348
+
+// 62 Return a String as an Integer
 /*Create a function that takes a string and returns it as an integer.*/
 const stringInt = (str) => {
-  return parseInt(str)
-} 
-stringInt("6") 
-stringInt("1000") 
-stringInt("12") 
+	return parseInt(str)
+}
+stringInt("6")
+stringInt("1000")
+stringInt("12")
+
+// 63 Concatenate First and Last Name into One String
+/* Given two strings, firstName and lastName, return a single string in the format "last, first".*/
+const concatName = (firstName, lastName) => {
+	return lastName.concat(" ", firstName)
+}
+concatName("First", "Last")
+concatName("John", "Doe")
+concatName("Mary", "Jane")
+
+// 64
