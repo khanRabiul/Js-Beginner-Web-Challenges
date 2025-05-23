@@ -1360,3 +1360,13 @@ function incrementItems(arr) {
 console.log(incrementItems([0, 1, 2, 3]))
 console.log(incrementItems([2, 4, 6, 8]))
 console.log(incrementItems([-1, -2, -3, -4]))
+
+// 66 Moving House
+
+/* 'd like to calculate how long on average I've lived in a single house.
+Given a person's age and the number of times they've moved house as moves, return the average number of years that they've spent living in the same house.*/
+
+const yearsInOneHouse = (age, moves) => {
+  return Math.round(age / (moves + 1))
+}
+yearsInOneHouse(30, 1) // 15 
