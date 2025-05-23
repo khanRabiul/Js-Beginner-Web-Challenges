@@ -1382,3 +1382,10 @@ const leapYear = (year) => {
 		return true;
 	} else return false;
 }
+
+// 68 Word without First Character
+/*Create a function that takes a word and returns the new word without including the first character. */
+const newWord = (word) => {
+  return word.substring(1)
+} 
+ console.log(newWord("Ra")) 
